@@ -58,7 +58,6 @@ int main() {
 		cost[x][y] = 0;
 		while(!pq.empty()) {
 			ii cur = pq.front();
-			// cout << " ( " << cur.fi << " " << cur.se << " | " << dg[cur.fi][cur.se] << ") ";
 			if(dg[cur.fi][cur.se] == 0) {
 				min_cont = min(min_cont, cost[cur.fi][cur.se]);
 			}
@@ -72,12 +71,6 @@ int main() {
 				}
 			}
 		}
-		// for(int i = 0; i < n; i++) {
-		// 	for(int j = 0; j < m; j++) {
-		// 		cout << cost[i][j] << " ";
-		// 	}
-		// 	cout << endl;
-		// }
 		cout << min_cont << endl;
 	}
 	return 0;
